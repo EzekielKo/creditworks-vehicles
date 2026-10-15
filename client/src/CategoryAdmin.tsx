@@ -114,7 +114,7 @@ export function CategoryAdmin() {
         </thead>
         <tbody>
           {categories.map((c) => (
-            <tr key={c.id} className="border-b border-gray-200">
+            <tr key={c.id} className={`border-b border-gray-200 ${editingId === c.id ? 'bg-blue-50' : ''}`}>
               <td className="p-2">
                 <CategoryIcon icon={c.icon} label={c.name} />
               </td>
@@ -133,7 +133,7 @@ export function CategoryAdmin() {
         </tbody>
       </table>
 
-      <h3 className="mb-3 text-lg font-semibold">{editingId === null ? 'Add category' : 'Edit category'}</h3>
+      <h3 className="mb-3 text-lg font-semibold">{editingId === null ? 'Add category' : `Editing: ${categories.find((c) => c.id === editingId)?.name ?? ''}`}</h3>
       <form onSubmit={handleSubmit} className="max-w-md space-y-4" noValidate>
         <label className="block">
           <span className="mb-1 block font-medium">Name</span>
