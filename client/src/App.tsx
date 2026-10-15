@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import { AddVehicleForm } from './AddVehicleForm'
+import { CategoryAdmin } from './CategoryAdmin'
 import { VehicleList } from './VehicleList'
 
-type Tab = 'vehicles' | 'add'
+type Tab = 'vehicles' | 'add' | 'categories'
 
 const tabs: { key: Tab; label: string }[] = [
   { key: 'vehicles', label: 'Vehicles' },
   { key: 'add', label: 'Add vehicle' },
+  { key: 'categories', label: 'Categories' },
 ]
 
 export default function App() {
@@ -31,6 +33,7 @@ export default function App() {
       </nav>
       {tab === 'vehicles' && <VehicleList />}
       {tab === 'add' && <AddVehicleForm onAdded={() => setTab('vehicles')} />}
+      {tab === 'categories' && <CategoryAdmin />}
     </main>
   )
 }
