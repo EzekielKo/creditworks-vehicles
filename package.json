@@ -1,0 +1,10 @@
+{
+  "name": "vehicle-manager",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n api,client -c blue,green \"dotnet run --project src/Vehicles.Api --launch-profile http\" \"pnpm --dir client dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
