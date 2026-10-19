@@ -83,9 +83,7 @@ Open http://localhost:5173. The client calls the API at `http://localhost:5221` 
 ### 5. Run the tests
 
 ```bash
-dotnet test tests/Vehicles.Tests.Unit          # no database needed
-dotnet test tests/Vehicles.Tests.Integration   # needs SQL Server and the user-secret above
-dotnet test                                    # both
+dotnet test                             
 ```
 
 There are 59 tests (33 unit, 26 integration). The integration tests use the same user-secret but a separate database, `VehiclesDb_Test`, which they create from the migrations. Development data is not touched.
