@@ -54,7 +54,7 @@ cd client && pnpm install && cd ..
 
 ### 4. Run
 
-**Option A: one command.** From the repo root:
+**One command** From the repo root:
 
 ```bash
 pnpm install
@@ -62,23 +62,6 @@ pnpm dev
 ```
 
 This starts the API (http://localhost:5221) and the React client (http://localhost:5173) together. Press Ctrl+C once to stop both.
-
-**Option B: two terminals.**
-
-API (from the repo root, listens on http://localhost:5221):
-
-```bash
-dotnet run --project src/Vehicles.Api --launch-profile http
-```
-
-Client (second terminal):
-
-```bash
-cd client
-pnpm dev
-```
-
-Open http://localhost:5173. The client calls the API at `http://localhost:5221` by default. To change that, set `VITE_API_URL` when starting the client.
 
 ### 5. Run the tests
 
