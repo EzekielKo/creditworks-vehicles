@@ -24,7 +24,12 @@ export type Vehicle = {
   categoryName: string
   categoryIcon: string
 }
-export type SortKey = 'owner' | 'manufacturer' | 'year' | 'weight'
+export type SortKey =
+  | 'owner'
+  | 'manufacturer'
+  | 'year'
+  | 'weight'
+  | 'category'
 
 /** Thrown for any failed request; `errors` holds user-readable messages. */
 export class ApiError extends Error {
