@@ -54,10 +54,16 @@ cd client && pnpm install && cd ..
 
 ### 4. Run
 
-**One command** From the repo root:
+**One command** From the repo root
 
+First time running:
 ```bash
 pnpm install
+pnpm dev
+```
+
+Subsequent running:
+```bash
 pnpm dev
 ```
 
